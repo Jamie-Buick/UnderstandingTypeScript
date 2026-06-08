@@ -14,6 +14,9 @@ interface Authenticatable {
 // }
 
 
+
+
+
 class AuthenticatableUser implements Authenticatable {
     constructor(public userName: string, public email: string, public password: string) {}   
 
@@ -26,7 +29,10 @@ class AuthenticatableUser implements Authenticatable {
     }
 }
 
-
+function authenticate(user: Authenticatable){
+    user.login();
+    
+}
 
 
 let user: Authenticatable;
